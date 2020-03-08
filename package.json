@@ -1,0 +1,24 @@
+{
+  "name": "full-stack-react",
+  "version": "1.0.0",
+  "description": "boiler plate for full stack apps using react front end, with express backend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k4iru/full-stack-react.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k4iru/full-stack-react/issues"
+  },
+  "homepage": "https://github.com/k4iru/full-stack-react#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  }
+}
