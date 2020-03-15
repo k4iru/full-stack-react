@@ -22,7 +22,6 @@
     "homepage": "https://github.com/k4iru/full-stack-react#readme",
     "dependencies": {
         "babel-polyfill": "^6.26.0",
-        "babel-preset-react": "^6.24.1",
         "express": "^4.17.1",
         "react": "^16.13.0",
         "react-dom": "^16.13.0"

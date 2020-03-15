@@ -8,12 +8,11 @@ module.exports = {
     entry: './src/client/index.js',
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: path.join(__dirname, outputDirectory),
         hotOnly: true,
     },
     output: {
         path: path.join(__dirname, outputDirectory),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
     },
     module: {
         rules: [{
@@ -22,7 +21,13 @@ module.exports = {
             use: {
                 loader: 'babel-loader',
                 options: {
-                    presets: ['react']
+                    presets: [
+                        "@babel/preset-env",
+                        "@babel/preset-react"
+                    ],
+                    plugins: [
+                        "@babel/plugin-proposal-class-properties"
+                    ]
                 }
             }
         },
