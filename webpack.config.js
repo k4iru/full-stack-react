@@ -9,6 +9,11 @@ module.exports = {
     devtool: 'inline-source-map',
     devServer: {
         hotOnly: true,
+        port: 3000,
+        open: true,
+        proxy: {
+            '/api': 'http://localhost:8080'
+        }
     },
     output: {
         path: path.join(__dirname, outputDirectory),
@@ -43,13 +48,6 @@ module.exports = {
     },
     resolve: {
         extensions: ['*', '.js', '.jsx']
-    },
-    devServer: {
-        port: 3000,
-        open: true,
-        proxy: {
-            '/api': 'http://localhost:8080'
-        }
     },
     plugins: [
         new CleanWebpackPlugin({
