@@ -5,7 +5,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const outputDirectory = 'dist';
 
 module.exports = {
-    entry: ['babel-polyfill', './src/client/index.js'],
+    entry: './src/client/index.js',
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: path.join(__dirname, outputDirectory),
+        hotOnly: true,
+    },
     output: {
         path: path.join(__dirname, outputDirectory),
         filename: 'bundle.js'
@@ -15,7 +20,10 @@ module.exports = {
             test: /\.(js|jsx)$/,
             exclude: /node_modules/,
             use: {
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                options: {
+                    presets: ['react']
+                }
             }
         },
             {
